@@ -40,15 +40,6 @@ Crafty.e("player, 2D, Canvas, Color, Twoway, Gravity, Collision")
 			this.y = 540;
 		}
 	})
-	.bind('EnterFrame', function () {
-		if (this.x >= stageW - this.w) {
-			this.x = stageW - this.w;
-		}
-		
-		if (this.x <= 0) {
-			this.x = 0;
-		}
-	})
 	.bind('Moved', function(from) {
 		if (this.hit('solid')){
 			this.attr({x: from.x, y: from.y});
@@ -64,6 +55,10 @@ Crafty.e("exit, 2D, Canvas, Color, Collision")
 // solids
 Crafty.e("floor")
 	.attr({ x: 0, y: 580, w: 800, h: 20 });
+Crafty.e("floor")
+	.attr({ x: -1, y: 0, w: 1, h: 580 });
+Crafty.e("floor")
+	.attr({ x: 800, y: 0, w: 1, h: 580 });
 
 Crafty.e("floor")
 	.attr({ x: 500, y: 540, w: 100, h: 20 });
@@ -136,15 +131,4 @@ function SpawnEnemy(x, y) {
 		.onHit("solid", function() {
 			this.dX *= -1;
 		})
-		.bind('EnterFrame', function () {
-			if (this.x >= stageW - this.w) {
-				this.x = stageW - this.w;
-				this.dX *= -1;
-			}
-			
-			if (this.x <= 0) {
-				this.x = 0;
-				this.dX *= -1;
-			}
-		});
 }
