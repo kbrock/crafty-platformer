@@ -4,6 +4,13 @@ var stageY = 600;
 Crafty.init(stageW, stageY);
 Crafty.background('#00BFFF');
 
+Crafty.c("floor", {
+	init: function() {
+		this.requires('solid, 2D, Canvas, Color, Collision')
+		this.color('#8B7355')
+	}
+})
+
 Crafty.e("player, 2D, Canvas, Color, Twoway, Gravity, Collision")
 	.color('#0000ff')
 	.attr({ x: 0, y: 540, w: 15, h: 40 })
@@ -55,68 +62,52 @@ Crafty.e("exit, 2D, Canvas, Color, Collision")
 
 	
 // solids
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 0, y: 580, w: 800, h: 20 });
 
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 500, y: 540, w: 100, h: 20 });
 	
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 550, y: 480, w: 100, h: 20 });
 	
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 600, y: 420, w: 100, h: 20 });
 
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 760, y: 380, w: 40, h: 20 });
 
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 600, y: 320, w: 100, h: 20 });
 
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 320, y: 280, w: 100, h: 20 });
 
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 120, y: 240, w: 40, h: 20 });
 
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 0, y: 200, w: 40, h: 20 });
 
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 160, y: 160, w: 80, h: 20 });
 
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 320, y: 120, w: 20, h: 20 });
 	
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 360, y: 120, w: 20, h: 20 });
 
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 400, y: 120, w: 20, h: 20 });
 
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 500, y: 80, w: 300, h: 20 });
 
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 200, y: 380, w: 60, h: 20 });
 	
-Crafty.e("solid, 2D, Canvas, Color, Collision")
-	.color('#8B7355')
+Crafty.e("floor")
 	.attr({ x: 200, y: 360, w: 20, h: 20 });
 	
 	
